@@ -7,7 +7,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-    return "Миссия Колонизация Марса"
+    pages = ['/index', '/promotion', '/image_sample', '/countdown', '/form_sample']
+    return f"Миссия Колонизация Марса\nСписок всех возможных страниц:\n" + '\n'.join(pages)
 
 
 @app.route('/index')
